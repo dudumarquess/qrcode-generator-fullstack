@@ -1,0 +1,6 @@
+[submodule "qrcode-generator"]
+	path = qrcode-generator
+	url = https://github.com/dudumarquess/qrcode-generator.git
+[submodule "frontend-angular"]
+	path = frontend-angular
+	url = https://github.com/dudumarquess/qrcode-front.git

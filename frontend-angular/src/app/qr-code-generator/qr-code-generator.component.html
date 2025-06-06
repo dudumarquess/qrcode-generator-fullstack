@@ -1,0 +1,27 @@
+<div class="background-gradient">
+  <div class="container">
+    <div class="logo-title">
+      <img src="assets/qr-code.png" alt="Logo QR Code" class="logo-img" />
+      <span class="logo-text">QrCodeApp</span>
+    </div>
+    <h2>Gerador de QR Code</h2>
+    <p class="subtitle">Transforme qualquer texto ou link em um QR Code facilmente!</p>
+
+    <form (ngSubmit)="generateQrCode()">
+      <input type="text" [(ngModel)]="textInput" name="textInput" placeholder="Digite o texto ou URL" required />
+      <button type="submit">Gerar QR Code</button>
+    </form>
+
+    <div *ngIf="qrCodeUrl" class="qr-card">
+      <h3>QR Code Gerado:</h3>
+      <img [src]="qrCodeUrl" alt="QR Code" />
+      <button class="download-btn" (click)="downloadQrCode()" type="button">Baixar QR Code</button>
+    </div>
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  </div>
+  <footer>
+    <span>© {{ currentYear }} QrCodeApp • All Rights Reserved</span>
+  </footer>
+</div>
